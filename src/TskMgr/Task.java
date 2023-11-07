@@ -1,3 +1,5 @@
+package TskMgr;
+
 public class Task {
 
     private int id;
@@ -7,7 +9,8 @@ public class Task {
 
 
 
-    public Task(int id, String title, String description, boolean isCompleted) {
+
+    public Task(int id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;
