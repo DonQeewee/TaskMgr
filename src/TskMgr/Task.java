@@ -2,6 +2,7 @@ package TskMgr;
 
 public class Task {
 
+    public static int getId;
     private int id;
     private String title;
     private String description;

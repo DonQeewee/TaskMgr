@@ -3,23 +3,22 @@ package TskMgr;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskManager<Task> {
+public class TaskManager {
 
     private User user;
     private List<Task> taskList;
 
-    public <Task> TaskManager(User user, List<Task> taskList) {
+
+    public TaskManager(User user) {
         this.user = user;
         this.taskList = new ArrayList<>();
     }
 
-    public TaskManager() {
 
-    }
 
     public void addTask(Task task) {
         taskList.add(task);
-        System.out.println("task added" + task.getTitle));
+        System.out.println("task added: " + task.getTitle());
     }
 
     public void deleteTask(int taskId) {
@@ -35,7 +34,7 @@ public class TaskManager<Task> {
     public void viewPendingTasks() {
         System.out.println("Pending tasks for " + user.getUsername() + ":");
         for (Task task : taskList) {
-            if (!task.isCompleted) {
+            if (!task.isCompleted()) {
                 System.out.println("Task id: " + task.getId());
                 System.out.println("Title: " + task.getTitle());
                 System.out.println("Description: " + task.getDescription());
