@@ -10,8 +10,8 @@ public class Main {
         User user = new User("Ayo Fash");
         TaskManager taskManager = new TaskManager(user);
 
-        Task task01 = new Task(001, "Foundation set-out.", "Setting the poles and pole lines for foundation digging and laying.");
-        Task task02 = new Task(002, "Foundation laying.", "Concrete mixing and laying of the foundation blocks.");
+        Task task01 = new Task( "Foundation set-out.", "Setting the poles and pole lines for foundation digging and laying.");
+        Task task02 = new Task( "Foundation laying.", "Concrete mixing and laying of the foundation blocks.");
 
         taskManager.addTask(task01);
         taskManager.addTask(task02);

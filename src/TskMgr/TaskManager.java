@@ -23,12 +23,15 @@ public class TaskManager {
 
     public void deleteTask(int taskId) {
         for (Task task : taskList) {
-            if (Task.getId == taskId) {
+            if (task.getId() == taskId) {
                 taskList.remove(task);
                 System.out.println("Task Id " + taskId + " deleted.");
+            }else {
+                System.out.println("Task Id " + taskId + " does not exist.");
             }
+
         }
-        System.out.println("Task Id " + taskId + " does not exist.");
+
     }
 
     public void viewPendingTasks() {

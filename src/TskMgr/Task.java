@@ -2,7 +2,7 @@ package TskMgr;
 
 public class Task {
 
-    public static int getId;
+    public static int getId = 0;
     private int id;
     private String title;
     private String description;
@@ -11,8 +11,8 @@ public class Task {
 
 
 
-    public Task(int id, String title, String description) {
-        this.id = id;
+    public Task(String title, String description) {
+        this.id = ++getId;
         this.title = title;
         this.description = description;
         this.isCompleted = false;  //task completion status is pending by default.
@@ -32,7 +32,7 @@ public class Task {
     }
 
     public boolean isCompleted() {
-        return true;
+        return isCompleted;
     }
 
     public void setCompleted(boolean completed) {
